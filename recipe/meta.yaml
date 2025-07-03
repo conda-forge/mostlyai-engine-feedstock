@@ -1,5 +1,5 @@
 {% set name = "mostlyai-engine" %}
-{% set version = "1.4.5" %}
+{% set version = "1.4.7" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mostlyai_engine-{{ version }}.tar.gz
-  sha256: a2ceaafc3245f00a49a6c075c3fe4bd4aee83fa983a017633de1bdcdf325e5b5
+  sha256: bebbc8e0ed09625c4c3bd8a5db195ca95b7fcd42c3b2fd8bb2a8dace930d7ebe
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - setuptools >=77.0.3
-    - numpy >=1.26.3
+    - numpy >=2.0.0
     - pandas >=2.2.0,<2.3.dev0
     - pyarrow >=16.0.0
     - joblib >=1.4.2
@@ -35,12 +35,12 @@ requirements:
     - accelerate >=1.5.0
     - peft >=0.12.0
     - huggingface_hub >=0.30.2
-    - opacus >=1.5.2
-    - xgrammar >=0.1.18
+    - opacus >=1.5.4
+    - xgrammar >=0.1.19
     - json-repair >=0.30.0,<0.47.0
-    - pytorch >=2.6.0,<2.6.1
-    - torchaudio >=2.6.0,<2.6.1
-    - torchvision >=0.21.0,<0.21.1
+    - pytorch >=2.7.0,<2.7.1
+    - torchaudio >=2.7.0,<2.7.1
+    - torchvision >=0.22.0,<0.22.1
 
 test:
   imports:
